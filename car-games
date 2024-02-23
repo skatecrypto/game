@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+using namespace std;
+
+//Hello this is my first game !
+
+//This is basically a game im which you are playing against me :) and a random number is chosen...which ever number is the largest among them he/she is the winner !
+
+// It took me a half day to solve this algorithm..but I'm happy it's completed now :D
+
+//Play it several times and have fun
+
+//Author : skatecrypto
+
+//Thanks for viewing.Hope you will enjoy.
+
+int game(void)
+{
+    int ran;
+    ran = 1 + rand() % 2;
+    return ran;
+}
+
+int main()
+{
+    //max limit in the game
+    int max = 100;
+    
+    srand(time(0));
+    
+    int opponent = 0;
+    for (int i = 1; i <= max; i++)
+    //loop
+    {
+        int result = game();
+        if (result == 1)
+            opponent++;
+    }
+   cout <<"Your score: "<< opponent << endl <<endl;
+   cout <<"My score: "<< max - opponent << endl << endl;
+    if(opponent  < max - opponent )
+    {
+        cout << "Yeppy 😆 I won!" << endl << endl;
+    }
+    else if(opponent  == max - opponent)
+    {
+        cout << "Hahaha it's a tie 🏁🏁🏁! now retry ♻️ " << endl << endl;
+    }
+    else
+    {
+        cout << "Congratulations 🎉! you are the winner 🥇🏆🏅" << endl << endl;
+        cout << "Have this 🍩🍦🎁💰" << endl << endl;
+    }
+    
+   cout << "Run it several times and have more fun 😇"<<endl << endl;
+    cout <<"----------------------------------------";
+    return 0;
+}
